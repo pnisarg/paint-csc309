@@ -1,0 +1,73 @@
+#canvas {
+	position:relative;
+	height:800px;
+	width:1600px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#mainCanvas {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:0;
+}
+
+#selectedCanvas {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:1;
+}
+
+#toolbar {
+	position:relative;
+	padding: 10px 4px;
+	width:1600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#modeMenu, #attributeMenu, #actionMenu {
+	padding: 60px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+button, input {
+	width: 100px;
+}
+
+#outlineSlider, #fillSlider, #widthSlider, #alphaSlider {
+	position:relative;
+}
+
+.colorSelector, .slider {
+	position:absolute;
+	top:-140px;
+	left:0px;
+	right:0px;
+	margin-left:auto;
+	margin-right:auto;
+	z-index:2;
+}
+
+.red, .green, .blue {
+	float:left;
+	margin:4px;
+}
+
+.red .ui-slider-range { background: #ef2929; }
+.red .ui-slider-handle { border-color: #ef2929; }
+.green .ui-slider-range { background: #8ae234; }
+.green .ui-slider-handle { border-color: #8ae234; }
+.blue .ui-slider-range { background: #729fcf; }
+.blue .ui-slider-handle { border-color: #729fcf; }

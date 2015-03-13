@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSC309 A1 - Paint</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="paint.js"></script>
+	<script type="text/javascript" src="paint-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+	<link rel="stylesheet" href="paint.css" />
+</head>
+
+<body>
+
+	<div id="canvas">
+		<canvas id="mainCanvas"     height="800" width="1600"></canvas>
+		<canvas id="selectedCanvas" height="800" width="1600"></canvas>
+	</div>
+
+	<div id="toolbar" class="ui-widget-header ui-corner-all">
+
+		<span id="modeMenu">
+			<input type="radio" name="mode" id="select" onclick="setMode(0);" /><label for="select">Select</label>
+			<input type="radio" name="mode" id="line" onclick="setMode(1);" /><label for="line">Line</label>
+			<input type="radio" name="mode" id="rectangle" onclick="setMode(2);" /><label for="rectangle">Rectangle</label>
+			<input type="radio" name="mode" id="circle" onclick="setMode(3);" /><label for="circle">Circle</label>
+		</span>
+
+		<span id="attributeMenu">
+			<span id="outlineSlider">
+				<button id="outline" onclick="">Outline</button>
+				<div class="colorSelector"></div>
+			</span>
+			<span id="widthSlider">
+				<button id="width" onclick="">Width</button>
+				<div class="slider"></div>
+			</span>
+			<span id="fillSlider">
+				<button id="fill" onclick="">Fill</button>
+				<div class="colorSelector"></div>
+			</span>
+			<span id="alphaSlider">
+				<button id="alpha" onclick="">Alpha</button>
+				<div class="slider"></div>
+			</span>
+		</span>
+
+		<span id="actionMenu">
+			<button id="clear" onclick="clearCanvas();">Clear</button>
+			<button id="delete" onclick="deleteShape();">Delete</button>
+			<button id="copy" onclick="copyShape();">Copy</button>
+			<button id="paste" onclick="pasteShape();">Paste</button>
+		</span>
+
+	</div>
+</body>
+
+<html>
